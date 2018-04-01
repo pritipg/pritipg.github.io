@@ -1,0 +1,417 @@
+/* ====================
+    Reset CSS
+    http://meyerweb.com/eric/tools/css/reset/ v2.0 | 20110126
+    License: none (public domain)
+   ==================== */
+
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed,
+figure, figcaption, footer, header, hgroup,
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  font: inherit;
+  vertical-align: baseline;
+}
+article, aside, details, figcaption, figure,
+footer, header, hgroup, menu, nav, section {
+  display: block;
+}
+body {
+  line-height: 1;
+}
+ol, ul {
+  list-style: none;
+}
+blockquote, q {
+  quotes: none;
+}
+blockquote:before, blockquote:after,
+q:before, q:after {
+  content: '';
+  content: none;
+}
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+/* ====================
+    Box sizing
+   ==================== */
+
+*,
+*:before,
+*:after {
+  -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+         box-sizing: border-box;
+}
+
+/* ====================
+    Base
+   ==================== */
+
+html {
+  max-width: 1024px;
+  margin: 2rem auto;
+  padding: 0 2rem;
+}
+
+/**
+ * Fade in on page load.
+ * https://stackoverflow.com/questions/11679567/using-css-for-fade-in-effect-on-page-load
+ */
+html {
+  -webkit-animation: fadein 2s; /* Safari, Chrome and Opera > 12.1 */
+     -moz-animation: fadein 2s; /* Firefox < 16 */
+      -ms-animation: fadein 2s; /* Internet Explorer */
+       -o-animation: fadein 2s; /* Opera < 12.1 */
+          animation: fadein 2s;
+}
+@keyframes fadein {
+  from { opacity: 0; }
+  to   { opacity: 1; }
+}
+@-moz-keyframes fadein {
+    from { opacity: 0; }
+    to   { opacity: 1; }
+}
+@-webkit-keyframes fadein {
+    from { opacity: 0; }
+    to   { opacity: 1; }
+}
+@-ms-keyframes fadein {
+    from { opacity: 0; }
+    to   { opacity: 1; }
+}
+@-o-keyframes fadein {
+    from { opacity: 0; }
+    to   { opacity: 1; }
+}
+
+/* ====================
+    Typography
+   ==================== */
+
+body {
+  color: rgba(0,0,0,0.70);
+  background: #fafafa;
+
+  font-size: 16px;
+  font-family: "Roboto", sans-serif;
+  font-weight: 400;
+  line-height: 1.5;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  margin-bottom: 0.5em;
+
+  font-family: "avenir next", avenir, sans-serif;;
+  line-height: 1.25;
+}
+h1 { font-size: 2.25rem;  }
+h2 { font-size: 1.5rem;   }
+h3 { font-size: 1.25rem;  }
+h4 { font-size: 1rem;     }
+h5 { font-size: .875rem;  }
+
+em, i {
+  font-style: italic;
+}
+strong, b {
+  font-weight: 700;
+}
+
+p {
+  margin-bottom: 1em;
+}
+
+li {
+  margin-bottom: 1em;
+}
+ul li {
+  padding-left: 2em;
+  text-indent: -2em;
+}
+ul li:before {
+  font-weight: 700;
+  content: "→";
+  padding-right: 1em;
+}
+ol li {
+  counter-increment: step-counter;
+  padding-left: 2em;
+  text-indent: -2em;
+}
+ol li:before {
+  font-weight: 700;
+  content: counter(step-counter);
+  padding-right: 1.5em;
+}
+
+a {
+  text-decoration: none;
+  color: #d5008f;
+}
+
+img {
+  width: 100%;
+}
+
+.accent {
+  color: #d5008f;
+}
+
+/* ====================
+    Grid
+   ==================== */
+
+.group:before,
+.group:after {
+  content: "";
+  display: table;
+}
+.group:after {
+  clear: both;
+}
+.group {
+  clear: both;
+  *zoom: 1;
+}
+
+.col-1-2,
+.col-1-3,
+.col-2-3,
+.col-3-3,
+.col-1-4 {
+  float: left;
+}
+.col-1-2 {
+  width: 50%;
+}
+.col-1-3 {
+  width: 33.33%;
+}
+.col-2-3 {
+  width: 66.66%;
+}
+.col-1-1,
+.col-2-2,
+.col-3-3 {
+  width: 100%;
+}
+.col-1-4 {
+  width: 25%;
+}
+
+@media only screen and (max-width: 50em) {
+  .col-1-2,
+  .col-1-3,
+  .col-2-3,
+  .col-1-4 {
+    width: 100%;
+  }
+}
+
+/* ====================
+    Hover animations
+   ==================== */
+
+.dim {
+  opacity: 1;
+  transition: opacity .15s ease-in;
+}
+.dim:hover,
+.dim:focus {
+  opacity: .5;
+  transition: opacity .15s ease-in;
+}
+.dim:active {
+  opacity: .8; transition: opacity .15s ease-out;
+}
+
+.glow {
+  transition: opacity .15s ease-in;
+}
+.glow:hover,
+.glow:focus {
+  opacity: 1;
+  transition: opacity .15s ease-in;
+}
+
+/* ====================
+    Margin & Padding
+   ==================== */
+.ma0  {  margin: 0; }
+.ma1 {  margin: .25rem; }
+.ma2  {  margin: .5rem; }
+.ma3  {  margin: 1rem; }
+.ma4  {  margin: 2rem; }
+.ma5  {  margin: 4rem; }
+.ma6 {  margin: 8rem; }
+.ma7 { margin: 16rem; }
+
+.mb0  {  margin-bottom: 0; }
+.mb1 {  margin-bottom: .25rem; }
+.mb2  {  margin-bottom: .5rem; }
+.mb3  {  margin-bottom: 1rem; }
+.mb4  {  margin-bottom: 2rem; }
+.mb5  {  margin-bottom: 4rem; }
+.mb6 {  margin-bottom: 8rem; }
+.mb7 { margin-bottom: 16rem; }
+
+.pa0 { padding: 0; }
+.pa1 { padding: .25rem; }
+.pa2 { padding: .5rem; }
+.pa3 { padding: 1rem; }
+.pa4 { padding: 2rem; }
+.pa5 { padding: 4rem; }
+.pa6 { padding: 8rem; }
+.pa7 { padding: 16rem; }
+
+.pb0 { padding-bottom: 0; }
+.pb1 { padding-bottom: .25rem; }
+.pb2 { padding-bottom: .5rem; }
+.pb3 { padding-bottom: 1rem; }
+.pb4 { padding-bottom: 2rem; }
+.pb5 { padding-bottom: 4rem; }
+.pb6 { padding-bottom: 8rem; }
+.pb7 { padding-bottom: 16rem; }
+
+.pr4 { padding-right: 2rem; }
+.pr5 { padding-right: 4rem; }
+
+.round { border-radius: 50%; }
+
+/* ====================
+    Text helpers
+   ==================== */
+
+.ttu { text-transform: uppercase; }
+
+.tl { text-align: left; }
+.tr { text-align: right; }
+.tc { text-align: center; }
+
+.i { font-style: italic; }
+.b { font-weight: bold;  }
+.n { font-style: normal; }
+
+/* ====================
+    Header
+   ==================== */
+
+.header > * {
+  margin: 0 auto;
+  margin-bottom: 1.5em;
+}
+
+/* Logo */
+.header__logo {
+  width: 200px;
+}
+
+/* Navigation */
+.header__nav {
+  text-align: center;
+}
+.header__nav-item {
+  margin: 0 .5em;
+  padding-bottom: 0.2em;
+
+  font-size: .875rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+}
+.header__nav-item.active {
+  color: #d5008f;
+  border-bottom: 2px solid;
+}
+
+/* Social */
+.header__social {
+  text-align: center;
+}
+.header__social-item {
+  display: inline-block;
+  padding: 10px 10px 4px 10px;
+  margin: 4px;
+  border-radius: 50%;
+  background: #d5008f;
+}
+.header__social-item svg {
+  width: 20px;
+  height: 20px;
+  fill: white;
+}
+
+/* ====================
+    Home page
+   ==================== */
+
+/* About me */
+.about-me__text {
+  font-size: 1.5rem;
+  line-height: 1.5;
+  text-align: center;
+  padding-left: 8rem;
+  padding-right: 8rem;
+}
+@media only screen and (max-width: 50em) {
+  .about-me__text {
+    font-size: 1.25rem;
+    padding-left: 0;
+    padding-right: 0;
+  }
+}
+
+/* Teasers */
+.teasers__item {
+  position: relative;
+}
+.teasers__item-text {
+  position: absolute;
+  bottom: 7px; left: 0;
+
+  opacity: 0;
+
+  background: rgba(255,255,255,0.9);
+  width: 100%;
+  height: calc(100% - 7px);
+  padding: 10%;
+  text-align: center;
+}
+.teasers__item-text-title {
+  font-size: 1.25rem;
+  font-family: "Roboto", sans-serif;
+}
+.teasers__item-text-separator {
+  width: 10%;
+  margin-top: 30px;
+  margin-bottom: 10px;
+}
+.teasers__item-text-tag {
+  text-transform: uppercase;
+  font-family: "Quicksand", sans-serif;
+}
+
+/* ====================
+    Other pages
+   ==================== */
+
+.heading {
+  border-bottom: 1px solid rgba(0,0,0,.1);
+}
