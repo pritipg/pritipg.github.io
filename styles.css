@@ -135,25 +135,6 @@ p {
 li {
   margin-bottom: 1em;
 }
-ul li {
-  padding-left: 2em;
-  text-indent: -2em;
-}
-ul li:before {
-  font-weight: 700;
-  content: "→";
-  padding-right: 1em;
-}
-ol li {
-  counter-increment: step-counter;
-  padding-left: 2em;
-  text-indent: -2em;
-}
-ol li:before {
-  font-weight: 700;
-  content: counter(step-counter);
-  padding-right: 1.5em;
-}
 
 a {
   text-decoration: none;
@@ -504,19 +485,10 @@ img {
 .slick-next {
   width: 25px;
   height: 25px;
-
 }
 
 .slick-prev:before,
 .slick-next:before {
   font-size: 25px;
   color: #8a8a8a;
-}
-
-.slick-dots {
-  bottom: -40px;
-}
-
-.slick-dots li:before {
-  content: "";
 }
