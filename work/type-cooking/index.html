@@ -6,6 +6,8 @@
     <title>Priti Pandurangan — Visual Design</title>
     <link rel="shortcut icon" type="image/x-icon" href="/favicon.ico">
     <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:400,400i,700,700i">
+    <link rel="stylesheet" href="/slick/slick.css"/>
+    <link rel="stylesheet" href="/slick/slick-theme.css"/>
     <link rel="stylesheet" href="/styles.css">
   </head>
   <body>
@@ -42,12 +44,12 @@
           <div class="group mb4">
             <img class="col-2-2 ph2 pb2" src="images/balm-label.jpg">
           </div>
-          <div class="group mb4">
+          <div class="group mb4 slides">
             <img class="col-2-2 ph2 pb2" src="images/poster-01.jpg">
             <img class="col-2-2 ph2 pb2" src="images/poster-02.jpg">
             <img class="col-2-2 ph2 pb2" src="images/poster-03.jpg">
           </div>
-          <div class="group mb4">
+          <div class="group mb4 slides">
             <img class="col-2-2 ph2 pb2" src="images/label-01.jpg">
             <img class="col-2-2 ph2 pb2" src="images/label-02.jpg">
             <img class="col-2-2 ph2 pb2" src="images/label-03.jpg">
@@ -88,5 +90,16 @@
         </a>
       </div>
     </footer>
+
+    <script src="//code.jquery.com/jquery-1.11.0.min.js"></script>
+    <script src="//code.jquery.com/jquery-migrate-1.2.1.min.js"></script>
+    <script src="/slick/slick.min.js"></script>
+    <script>
+      $('.slides').slick({
+        infinite: true,
+        dots: true,
+        autoplay: true,
+      })
+    </script>
   </body>
 </html>
