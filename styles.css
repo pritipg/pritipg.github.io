@@ -386,14 +386,14 @@ img {
 }
 .footer__social-item {
   display: inline-block;
-  padding: 10px 10px 4px 10px;
-  margin: 4px;
+  padding: 8px 9px 2px 9px;
+  margin: 2px;
   border-radius: 50%;
   background: #8a8a8a;
 }
 .footer__social-item svg {
-  width: 17px;
-  height: 15px;
+  width: 16px;
+  height: 16px;
   fill: white;
 }
 
