@@ -115,11 +115,11 @@ h1, h2, h3, h4, h5, h6 {
   font-family: "avenir next", avenir, sans-serif;;
   line-height: 1.25;
 }
-h1 { font-size: 2.25rem;  }
-h2 { font-size: 1.5rem;   }
-h3 { font-size: 1.25rem;  }
-h4 { font-size: 1rem;     }
-h5 { font-size: .875rem;  }
+h1, .f1 { font-size: 2.25rem;  }
+h2, .f2 { font-size: 1.5rem;   }
+h3, .f3 { font-size: 1.25rem;  }
+h4, .f4 { font-size: 1rem;     }
+h5, .f5 { font-size: .875rem;  }
 
 em, i {
   font-style: italic;
@@ -138,7 +138,7 @@ li {
 
 a {
   text-decoration: none;
-  color: #d5008f;
+  color: #8a8a8a;
 }
 
 img {
@@ -146,7 +146,7 @@ img {
 }
 
 .accent {
-  color: #d5008f;
+  color: #8a8a8a;
 }
 
 /* ====================
@@ -372,12 +372,18 @@ img {
   z-index: 999;
 
   padding: 1rem 3rem;
-  background: #f4f4f4;
+  background: white;
 }
 
 /* Copyright */
 .footer__copy {
   padding-top: 1em;
+}
+
+/* Links */
+.footer__links {
+  padding-top: 1em;
+  text-align: center;
 }
 
 /* Social */
@@ -401,12 +407,17 @@ img {
   .footer {
     position: static;
   }
-  .footer__copy {
+  .footer__copy,
+  .footer__links,
+  .footer__social {
     margin-bottom: 1em;
   }
   .footer__copy,
   .footer__social {
     text-align: center;
+  }
+  .footer__social {
+    padding-top: 1em;
   }
 }
 
