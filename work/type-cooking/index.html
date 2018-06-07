@@ -103,12 +103,15 @@
 
     <script src="//code.jquery.com/jquery-1.11.0.min.js"></script>
     <script src="//code.jquery.com/jquery-migrate-1.2.1.min.js"></script>
+    <script src="/imagesloaded.min.js"></script>
     <script src="/slick/slick.min.js"></script>
     <script>
-      $('.slides').slick({
-        infinite: true,
-        dots: true,
-        autoplay: false,
+      $('.slides').imagesLoaded(function() {
+        $('.slides').slick({
+          infinite: true,
+          dots: true,
+          autoplay: false,
+        })        
       })
     </script>
   </body>
