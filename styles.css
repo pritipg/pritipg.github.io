@@ -101,7 +101,6 @@ html {
 
 body {
   color: rgba(0,0,0,0.70);
-  background: #f4f4f4;
 
   font-size: 16px;
   font-family: "Fira Sans", sans-serif;
@@ -443,6 +442,7 @@ img {
 }
 .teasers__item {
   position: relative;
+  padding: 16px;
 }
 .teasers__item-text {
   position: absolute;
@@ -452,7 +452,7 @@ img {
 
   background: rgba(255,255,255,0.9);
   width: 100%;
-  height: calc(100% - 7px);
+  height: calc(100% - 14px);
   padding: 30%;
   text-align: center;
 }
