@@ -121,6 +121,13 @@ h3, .f3 { font-size: 1.25rem;  }
 h4, .f4 { font-size: 1rem;     }
 h5, .f5 { font-size: .875rem;  }
 
+@media only screen and (max-width: 50em) {
+  h1, .f1 { font-size: 1.5rem;  }
+  h2, .f2 { font-size: 1.25rem;   }
+  h3, .f3 { font-size: 1rem;  }
+  h4, .f4 { font-size: .875rem;  }
+}
+
 em, i {
   font-style: italic;
 }
@@ -275,6 +282,11 @@ img {
 .pa6 { padding: 8rem; }
 .pa7 { padding: 16rem; }
 
+@media only screen and (max-width: 50em) {
+  .pa0-m { padding: 0; }
+  .pa1-m { padding: 1rem; }
+}
+
 .pb0 { padding-bottom: 0; }
 .pb1 { padding-bottom: .25rem; }
 .pb2 { padding-bottom: .5rem; }
@@ -300,6 +312,7 @@ img {
   padding-right: 2rem;
 }
 .round { border-radius: 50%; }
+
 
 /* ====================
     Text helpers
@@ -466,8 +479,16 @@ img {
 
 .main {
   max-width: 1366px;
+  margin: 0 2rem;
   padding: 0 2rem;
 }
+
+@media only screen and (max-width: 50em) {
+  .main {
+    margin: 0rem;
+  }
+}
+
 
 /* ====================
     Other pages
