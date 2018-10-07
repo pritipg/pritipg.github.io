@@ -319,11 +319,6 @@ img {
     Header
    ==================== */
 .header {
-  position: fixed;
-  top: 0;
-  width: 100%;
-  z-index: 999;
-
   padding: 2rem 3rem;
   background: white;
 }
@@ -433,16 +428,11 @@ img {
 
 /* Teasers */
 .teasers {
-  margin: 7rem auto;
-}
-@media only screen and (max-width: 50em) {
-  .teasers {
-    margin-top: 10rem;
-  }
+  padding: 2rem;
 }
 .teasers__item {
   position: relative;
-  padding: 16px;
+  padding: 1rem;
 }
 .teasers__item-text {
   position: absolute;
@@ -476,14 +466,7 @@ img {
 
 .main {
   max-width: 1366px;
-  margin: 7rem auto;
   padding: 0 2rem;
-}
-
-@media only screen and (max-width: 50em) {
-  .main {
-    margin-top: 12rem;
-  }
 }
 
 /* ====================
