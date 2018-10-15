@@ -307,6 +307,10 @@ img {
   padding-left: .5rem;
   padding-right: .5rem;
 }
+.ph3 {
+  padding-left: 1rem;
+  padding-right: 1rem;
+}
 .ph4 {
   padding-left: 2rem;
   padding-right: 2rem;
