@@ -8,6 +8,10 @@ var subtitle = 'a reimagination by priti pandurangan'
 var subtitleSize = 24
 var subtitleWidth
 
+var instruction = 'Press SPACE to play and F for fullscreen. In each of the verse sections, use the arrow keys to interact once the narration is complete.'
+var instructionSize = 16
+var instructionWidth
+
 var drops = []
 
 var raindropSound
@@ -35,6 +39,9 @@ function setup () {
   textSize(subtitleSize)
   subtitleWidth = textWidth(subtitle)
 
+  textSize(instructionSize)
+  instructionWidth = textWidth(instruction)
+
   for (var i = 0; i < 50; i++) {
     drops.push(new RainDrop())
   }
@@ -54,6 +61,10 @@ function draw() {
   fill(123, 71, 103)
   textSize(subtitleSize)
   text(subtitle, width - subtitleWidth - (width - titleWidth)/2 - 12, height * 0.85)
+
+  fill(30, 66, 74)
+  textSize(instructionSize)
+  text(instruction, (width - instructionWidth)/2, height * 0.95)
 
   translate(width/2, height/2)
   textSize(24)
