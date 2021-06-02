@@ -1,0 +1,111 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>coral reefs | tiny (data) tales</title>
+    <link rel="shortcut icon" type="image/x-icon" href="/favicon.ico">
+    <link rel="stylesheet" href="https://unpkg.com/tachyons@4.12.0/css/tachyons.min.css"/>
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Nunito:wght@300;400;600;700&display=swap">
+    <script src="https://cdn.jsdelivr.net/gh/alpinejs/alpine@v2.8.2/dist/alpine.min.js" defer></script>
+    <style>
+      .coral-bg { background: #f2f2f2; }
+      .nunito { font-family: 'Nunito', sans-serif; }
+    </style>
+  </head>
+  <body class="nunito coral-bg near-black mw8 ml-auto mr-auto">
+    <div class="f2 lh-title measure fw7 mt5 mb4 tc">Corals are bleaching faster than they can recover.</div>
+    <img class="w4 db ml-auto mr-auto" src="images/divider.svg">
+
+    <div x-data="{ step: 0 }">
+      <div class="f2 lh-title tc mh2 mv4">
+        <span
+          class="bb"
+          :class="{ 'pointer dim bw1': step != 1, 'b bw2': step == 1 }"
+          @click="step = 1"
+        >
+          Coral bleaching
+        </span> is becoming more
+        <span
+          class="bb"
+          :class="{ 'pointer dim bw1': step != 2, 'b bw2': step == 2 }"
+          @click="step = 2"
+        >
+          common
+        </span>
+        <br>and
+        <span
+          class="bb"
+          :class="{ 'pointer dim bw1': step != 3, 'b bw2': step == 3 }"
+          @click="step = 3"
+        >
+          severe
+        </span>, with
+        <span
+          class="bb"
+          :class="{ 'pointer dim bw1': step != 4, 'b bw2': step == 4 }"
+          @click="step = 4"
+        >
+          reduced intervals
+        </span>.
+      </div>
+      <div x-show="step == 0" class="f5 black-50 mv4 tc">
+        Click the underlined phrases to drill down.
+      </div>
+
+      <div x-show="step == 1" class="flex mv5">
+        <figure class="w-two-thirds db">
+          <img src="images/coral-reef-thumbnail.jpg">
+          <figcaption class="mt2"><span class="br bw1 black-10 mr2"></span> Photo by David Clode on Unsplash</figcaption>
+        </figure>
+        <div class="w-third mt2 f4 lh-copy">
+          Corals are delicate organisms that are sensitive to their surrounding climate.
+          Rising ocean temperatures &mdash; such as caused by global warming &mdash; can
+          put corals under distress. When exposed to warmer waters, corals expel their algal
+          cover, losing their energy source and turn pale. This phenomenon is known as coral bleaching.
+          <div @click="step = 2" class="f5 link pointer dim mt5 i black-50">See how bleaching events have changed in the past decade &rarr;</div>
+        </div>
+      </div>
+
+      <div x-show="step == 2" class="mv5">
+        <div class="f4 lh-copy mb4 tc mh5">
+          Researchers studied bleaching events between 1980 and 2016 in 100 coral reefs across the world.
+          Bleaching events that affected less than 30% of the corals were classified as moderate, while
+          the one affecting above 30% corals were classified as severe events.
+        </div>
+        <img src="images/coral-vis-01.jpg">
+        <div @click="step = 3" class="f5 link pointer dim mt5 i black-50 tc">
+          See how the intensity of bleaching events has changed over time &rarr;
+        </div>
+      </div>
+
+      <div x-show="step == 3" class="mv5">
+        <div class="f4 lh-copy mb4 tc mh5">
+          As bleaching events become more common and spread across the world, fewer and fewer corals are left untouched.
+          The rate of severe bleaching annually has increased by a rate of ~4.3%, from covering only 4% of the surveyed locations
+          in the 1980s to affecting over 17% in 2016.
+        </div>
+        <img src="images/coral-vis-02.jpg">
+        <div @click="step = 4" class="f5 link pointer dim mt5 i black-50 tc">
+          See how the intervals between bleaching events have changed &rarr;
+        </div>
+      </div>
+
+      <div x-show="step == 4" class="mv5">
+        <img src="images/coral-vis-03.jpg">
+        <div class="f4 lh-copy mb4 tc mh5">
+          <span class="b">Bottom line</span>: The frequency and intensity of bleaching events is rapidly reaching unsustainable levels. Coral reefs are
+          facing an era in which the interval between recurrent, severe events has diminished to the point where coral assemblages
+          do not have sufficient time to recover.
+        </div>
+      </div>
+
+      <div class="mv5" x-show="step > 1">
+        <hr>
+        <div class="f5 b mb3 black-50">Reference</div>
+        <div>Hughes, T. P., et. al. (2018). <a class="link pointer dim black-50" href="https://science.sciencemag.org/content/359/6371/80" target="_blank">Spatial and temporal patterns of mass bleaching of corals in the Anthropocene</a>. Science, 359(6371), 80-83.</div>
+      </div>
+    </div>
+  </body>
+</html>
