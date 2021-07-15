@@ -495,8 +495,8 @@ img {
    ==================== */
 
 .main {
-  max-width: 1366px;
-  margin: 0 2rem;
+  max-width: 1200px;
+  margin: 0 auto;
   margin-bottom: 8rem;
   padding: 0 2rem;
   background: #fafafa;
